@@ -123,10 +123,17 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 function getFlavorByIndex(originalFlavors){
+    const flavors = [...originalFlavors]
+    let flavors=[];
+    
 
-   
+    
+    return (originalFlavors);
+    
 }
-getFlavorByIndex(originalFlavors,2)
+getFlavorByIndex(originalFlavors[0]);
+
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
