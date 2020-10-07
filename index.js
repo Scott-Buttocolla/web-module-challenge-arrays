@@ -121,17 +121,11 @@ Use the getFlavorByIndex function below to do the following:
 
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
-
-function getFlavorByIndex(originalFlavors){
-    const flavors = [...originalFlavors]
-    let flavors=[];
-    
-
-    
-    return (originalFlavors);
-    
+const flavorsArr = [...originalFlavors];
+function getFlavorByIndex(flavorsArr, position){    
+    return flavorsArr[position];      
 }
-getFlavorByIndex(originalFlavors[0]);
+getFlavorByIndex(flavorsArr, 2);
 
 
 
