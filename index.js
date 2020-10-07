@@ -47,8 +47,8 @@ Use the copy function below to do the following:
 
 
 
-function copy(originalFlavors){
-    return [...originalFlavors];
+function copy(array){
+    return [...array];
 }
 const copyOriginalFlavors= copy(originalFlavors);
 console.log(copyOriginalFlavors);
@@ -144,11 +144,16 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
- function removeFlavorByName(originalFlavors){
-    originalFlavors.splice(29,1)
-    return (originalFlavors);
-}
-removeFlavorByName(originalFlavors)
+ function removeFlavorByName(array, flav){
+     for(let i =0; i < array.length; i++){
+         if(array[i] === flav){
+             array.splice(i, 1);
+             return array;
+    }
+ }
+      return 'Could not find your flavor.';
+ }
+removeFlavorByName(originalFlavors, "Rocky Road")
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -219,10 +224,10 @@ Use the getRandomFlavors function and new arrays below to do the following:
 function getRandomFlavors(/*code here*/){
     /*code here*/
 }
-// const flavor = originalFlavors[Math.floor(Math.random() * originalFlavors.length)];
-// const flavor1 = regionalFlavors[Math.floor(Math.random() * regionalFlavors.length)];
-// const flavor2 = seasonalFlavors[Math.floor(Math.random() * seasonalFlavors.length)];
-// const flavor3 = newFlavors[Math.floor(Math.random() * newFlavors.length)];
+// const flavor = originalFlavors[Math.round(Math.random() * originalFlavors.length)];
+// const flavor1 = regionalFlavors[Math.round(Math.random() * regionalFlavors.length)];
+// const flavor2 = seasonalFlavors[Math.round(Math.random() * seasonalFlavors.length)];
+// const flavor3 = newFlavors[Math.round(Math.random() * newFlavors.length)];
 // console.log((flavor), (flavor1), (flavor2), (flavor3));
 
 
