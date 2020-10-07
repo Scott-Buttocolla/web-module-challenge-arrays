@@ -41,16 +41,17 @@ With all of these changes going on, we don't want to lose track of the actual, o
 
 /*
 Use the copy function below to do the following:
-    1. Receive two arguments: one for your new array and one for your original array
+    1. Receive one arguments: one for your new array and one for your original array
     2. Return the new array that holds an exact copy of the old array  
 */
 
-let cloneFlavors= originalFlavors.slice();
 
-function copy(cloneFlavors){
-    
-}    
 
+function copy(originalFlavors){
+    const copyOriginalFlavors = [...originalFlavors]
+    console.log(copyOriginalFlavors);
+}
+copy(originalFlavors);
 
 
 
@@ -67,13 +68,12 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(originalFlavors){     
-    if(is31Flavors === 31){
-      return ('true');
+    if(originalFlavors.length === 31){
+      return true;
     }else{
-      return ('false');
+      return false;
     }
 } 
-console.log(is31Flavors.length);
 is31Flavors(originalFlavors);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -88,15 +88,11 @@ Use the addFlavor function below to do the following:
     For example: addFlavor("Rainbow Sherbert", originalFlavors) should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-
-function addFlavor(/*your code here*/){
-   /*your code here*/
-
-
-
-   originalFlavors.push('Rainbow Sherbert')
-}
-
+function addFlavor(originalFlavors){
+    originalFlavors.unshift('Rainbow Sherbert')
+    return (originalFlavors)
+ }
+addFlavor(originalFlavors);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -109,12 +105,11 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
-
-   originalFlavors.pop();
-}
-
+function removeLastFlavor(originalFlavors){
+    originalFlavors.pop();
+    return (originalFlavors)
+  }
+  removeLastFlavor(originalFlavors);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -146,10 +141,10 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
+ function removeFlavorByName(originalFlavors){
     /*your code here*/
-}
 
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -171,9 +166,28 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
+function filterByWord(originalFlavors, flavor){
+    let newarr=[];
+    for(let i = 0; i < originalFlavors.length; i++){
+        if(originalFlavors[i].includes(chocolate))
+    }
     /*your code here*/
 }
+function search(arr, string){
+    let newarr = [];
+   for(let i = 0; i < arr.length; i++ ){
+     if(arr[i].includes(string)){
+      newarr.push(arr[i]);
+     }
+   }
+   return newarr;
+ }
+
+
+
+
+
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
