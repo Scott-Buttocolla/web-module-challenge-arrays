@@ -48,10 +48,10 @@ Use the copy function below to do the following:
 
 
 function copy(originalFlavors){
-    const copyOriginalFlavors = [...originalFlavors]
-    console.log(copyOriginalFlavors);
+    return [...originalFlavors];
 }
-copy(originalFlavors);
+const copyOriginalFlavors= copy(originalFlavors);
+console.log(copyOriginalFlavors);
 
 
 
@@ -123,8 +123,10 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 function getFlavorByIndex(originalFlavors){
-   console.log(originalFlavors[2]);
+
+   
 }
+getFlavorByIndex(originalFlavors,2)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -142,9 +144,10 @@ Use the removeFlavorByName function below to do the following:
 */
 
  function removeFlavorByName(originalFlavors){
-    /*your code here*/
-
+    originalFlavors.splice(29,1)
+    return (originalFlavors);
 }
+removeFlavorByName(originalFlavors)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -169,21 +172,13 @@ Use the filterByWord function below to do the following:
 function filterByWord(originalFlavors, flavor){
     let newarr=[];
     for(let i = 0; i < originalFlavors.length; i++){
-        if(originalFlavors[i].includes(chocolate))
+        if(originalFlavors[i].includes(flavor)){
+            newarr.push(originalFlavors[i]);
+        }        
     }
-    /*your code here*/
+    return newarr;
 }
-function search(arr, string){
-    let newarr = [];
-   for(let i = 0; i < arr.length; i++ ){
-     if(arr[i].includes(string)){
-      newarr.push(arr[i]);
-     }
-   }
-   return newarr;
- }
-
-
+console.log(filterByWord(originalFlavors,'Chocolate'));
 
 
 
